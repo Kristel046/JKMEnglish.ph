@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JKM Online English Tutorial</title>
-   <link rel="stylesheet" href="styles.css">
-<script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -15,6 +15,32 @@
             <input type="password" id="password" placeholder="Password" required>
             <button type="submit">Login</button>
         </form>
+
+        <!-- Sign Up buttons -->
+        <button onclick="showSignUpForm('teacher')">Sign Up as Teacher</button>
+        <button onclick="showSignUpForm('student')">Sign Up as Student</button>
+
+        <!-- Sign Up Forms (hidden by default) -->
+        <div id="signUpTeacherForm" style="display:none;">
+            <h2>Sign Up as Teacher</h2>
+            <form>
+                <input type="text" id="teacherUsername" placeholder="Username" required>
+                <input type="password" id="teacherPassword" placeholder="Password" required>
+                <input type="email" id="teacherEmail" placeholder="Email" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <div id="signUpStudentForm" style="display:none;">
+            <h2>Sign Up as Student</h2>
+            <form>
+                <input type="text" id="studentUsername" placeholder="Username" required>
+                <input type="password" id="studentPassword" placeholder="Password" required>
+                <input type="email" id="studentEmail" placeholder="Email" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
         <div id="dashboard" style="display:none;">
             <h2>Welcome, <span id="userRole"></span>!</h2>
             <div id="teacherPanel" style="display:none;">
