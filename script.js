@@ -30,3 +30,14 @@ function bookClass() {
     }
     alert('Class booked successfully.');
 }
+
+function showSignUpForm(role) {
+    if (role === 'teacher') {
+        document.getElementById('signUpTeacherForm').style.display = 'block';
+        document.getElementById('signUpStudentForm').style.display = 'none';
+    } else if (role === 'student') {
+        document.getElementById('signUpTeacherForm').style.display = 'none';
+        document.getElementById('signUpStudentForm').style.display = 'block';
+    }
+}
+
